@@ -22,9 +22,6 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: hoangtuanfithou
-skype_username: hoangtuanfithou
-facebook_username: hoangtuanfithou
-google_username: hoangtuanfithou
 github_username: hoangtuanfithou
 
 # Build settings
@@ -32,6 +29,15 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+  # - jekyll-mentions
+  - jekyll-redirect-from
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-avatar
+  - jekyll-include-cache
+#bundle install
+#bundle update
+#jekyll serve
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

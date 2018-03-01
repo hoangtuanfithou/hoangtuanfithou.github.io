@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Welcome to my blog"
-date:   2018-03-01 22:12:43 +0800
+date:   2018-03-02 22:12:43 +0800
 categories: about
 ---
 What's the blog about: just for me, for testing something. For myself first. 🌼

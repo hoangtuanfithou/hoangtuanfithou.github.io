@@ -8,6 +8,6 @@ categories: jekyll
 Insert image : using this packages [md-wiriter][md-wiriter]
 [md-writer]: https://github.com/zhuochun/md-writer
 
-![](_site/images/2018/03/girl.png)
-
+![](girl.png)
+![ tree](images/2018/03/tree.png)
 note : cmd+shift+p: to excute command with Atom

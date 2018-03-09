@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Finding people for the house"
-date:   2018-6-04 23:56:00 +0800
+date:   2018-06-04 23:56:00 +0800
 categories: house
 ---
 

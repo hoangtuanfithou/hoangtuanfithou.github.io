@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Sat Mar 10 National Library 2nd time"
+title:  "🐢 National Library 2nd time"
 date:   2018-10-03 12:02:00 +0800
 categories: study
 ---
@@ -22,7 +22,6 @@ Agenda:
 
 ```
 
-Go to library 2nd time is nice.
-
+Then I have time to go to library 2nd time, it is nice.
 
 ~~~~

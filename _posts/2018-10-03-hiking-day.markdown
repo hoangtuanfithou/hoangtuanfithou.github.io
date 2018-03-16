@@ -24,4 +24,6 @@ Agenda:
 
 Then I have time to go to library 2nd time, it is nice.
 
+Ah just update just, in the Sunday afternoon, I wen to Henderson waves, and stayed there until night.
+So beautiful
 ~~~~

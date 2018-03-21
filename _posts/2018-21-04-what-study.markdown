@@ -6,7 +6,7 @@ categories: study
 ---
 This time I try something:
  Go: just a little bit. reason : my friend said that Grab changed to that language because of it performance.
- Node JS: because it is popular and is using at my company [tutorial here][nodejs]
+ Node JS: because it is popular and is using at my company [tutorial here][node_js]
 
  React native : it is also is using by Seedly team
 

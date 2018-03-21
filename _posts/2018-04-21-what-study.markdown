@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "What's should I study ?"
-date:   2018-21-04 7:26:00 +0800
+date:   2018-04-21 7:26:00 +0800
 categories: study
 ---
 This time I try something:

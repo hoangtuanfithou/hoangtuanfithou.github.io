@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "What's should I study ?"
-date:   2018-04-21 7:26:00 +0800
+date:   2018-03-21 7:26:00 +0800
 categories: study
 ---
 This time I try something:
@@ -15,6 +15,5 @@ It is not good, not focus.
 So I must think, choose then focus to 1 thing only.
 
 Btw, in that time do not forget to improve current needed skill.
-
+🐳
 [node_js_tu]:https://www.tutorialspoint.com/nodejs/index.htm
-~~~~

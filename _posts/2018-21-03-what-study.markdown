@@ -15,3 +15,5 @@ It is not good, not focus.
 So I must think, choose then focus to 1 thing only.
 
 Btw, in that time do not forget to improve current needed skill.
+
+~~~~

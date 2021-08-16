@@ -11,15 +11,19 @@ fields:
 - type: text
   name: permalink
   label: permalink
-- name: text_area
-  type: textarea
-  default: ''
+- name: gallery_
+  type: image_gallery
+  config: {}
+  label: 'Gallery '
+- name: date_field
+  type: datetime
+  label: Date Field
+  description: ''
   config:
     required: false
-    wysiwyg: false
-    schema:
-      format: markdown
-  label: Text area
+    date_format: 
+    time_format: 
+    display_utc: false
 pages:
 - _posts/2021-08-16-fsdfsdf.md
 - _posts/2021-08-16-this-2nd-one.md

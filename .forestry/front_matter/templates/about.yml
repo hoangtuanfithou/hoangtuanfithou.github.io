@@ -20,3 +20,5 @@ fields:
     schema:
       format: markdown
   label: Text area
+pages:
+- _posts/fsdfsdf.md

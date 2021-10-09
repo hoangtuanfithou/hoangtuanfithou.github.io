@@ -1,0 +1,29 @@
+---
+label: About
+hide_body: false
+fields:
+- type: text
+  name: layout
+  label: layout
+- type: text
+  name: title
+  label: title
+- type: text
+  name: permalink
+  label: permalink
+- name: gallery_
+  type: image_gallery
+  config: {}
+  label: 'Gallery '
+- name: date_field
+  type: datetime
+  label: Date Field
+  description: ''
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+pages:
+- _posts/2021-08-16-fsdfsdf.md
+- _posts/2021-08-16-this-2nd-one.md

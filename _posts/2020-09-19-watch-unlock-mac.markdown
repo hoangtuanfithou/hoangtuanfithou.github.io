@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "Issuse when using apple watch to unlock Mac"
-date:   2020-09-19 7:26:00 +0800
+title: How to fix Apple Watch can not unlock Mac ?
+date: 2020-09-19T07:26:00.000+08:00
 categories: Watch os 7
+
 ---
 I've finally fixed it! I found a bunch of errors related to "AutoUnlock" in the Console that was hinting to me that there was some invalid state on my Mac with keys and plists not being reset properly. After clearing/resetting them, I can now successfully pair my watchOS 7 Series 3 to macOS 10.15.6.
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "What's should I study ?"
+title:  "Issuse when using apple watch to unlock Mac"
 date:   2020-09-19 7:26:00 +0800
 categories: Watch os 7
 ---

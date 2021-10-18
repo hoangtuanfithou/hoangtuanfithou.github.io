@@ -18,41 +18,24 @@ jobs:
   pull-request-ecomm:
   # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        branches: ["project/ecomm", "project/go"]
     steps:
     - uses: actions/checkout@v2
     - name: pull-request
       uses: repo-sync/pull-request@v2
       with:
         source_branch: "master"                                 # If blank, default: triggered branch
-        destination_branch: "project/ecomm"                      # If blank, default: master
-        pr_title: "Pulling ${{ github.ref }} into ecomm"  # Title of pull request
-        pr_body: ":crown: *An automated PR*"              # Full markdown support, requires pr_title to be set
-        pr_template: ".github/pull_request_template.md"   # Path to pull request template, requires pr_title to be set, excludes pr_body
-        pr_reviewer: "hoangtuanfithou"                         # Comma-separated list (no spaces)
-        pr_assignee: "hoangtuanfithou"                         # Comma-separated list (no spaces)
-        pr_label: "auto-pr"                               # Comma-separated list (no spaces)
-        # pr_milestone: "Milestone 1"                       # Milestone name
-        pr_draft: false                                    # Creates pull request as draft
-        pr_allow_empty: true                              # Creates pull request even if there are no changes
+        destination_branch: "${{ matrix.branches }}"            # If blank, default: master
+        pr_title: "Pulling into ${{ matrix.branches }}"         # Title of pull request
+        pr_body: ":crown: *An automated PR*"                    # Full markdown support, requires pr_title to be set
+        pr_template: ".github/pull_request_template.md"         # Path to pull request template, requires pr_title to be set, excludes pr_body
+        pr_reviewer: "hoangtuanfithou"                          # Comma-separated list (no spaces)
+        pr_assignee: "hoangtuanfithou"                          # Comma-separated list (no spaces)
+        pr_label: "auto-pr"                                     # Comma-separated list (no spaces)
+        # pr_milestone: "Milestone 1"                           # Milestone name
+        pr_draft: false                                         # Creates pull request as draft
+        pr_allow_empty: false                                   # Creates pull request even if there are no changes
         github_token: ${{ secrets.GITHUB_TOKEN }}
         
-  pull-request-go:
-  # The type of runner that the job will run on
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - name: pull-request
-      uses: repo-sync/pull-request@v2
-      with:
-        source_branch: "master"                                 # If blank, default: triggered branch
-        destination_branch: "project/go"                      # If blank, default: master
-        pr_title: "Pulling master into go"  # Title of pull request
-        pr_body: ":crown: *An automated PR*"              # Full markdown support, requires pr_title to be set
-        pr_template: ".github/pull_request_template.md"   # Path to pull request template, requires pr_title to be set, excludes pr_body
-        pr_reviewer: "hoangtuanfithou"                         # Comma-separated list (no spaces)
-        pr_assignee: "hoangtuanfithou"                         # Comma-separated list (no spaces)
-        pr_label: "auto-pr"                               # Comma-separated list (no spaces)
-        # pr_milestone: "Milestone 1"                       # Milestone name
-        pr_draft: false                                    # Creates pull request as draft
-        pr_allow_empty: true                              # Creates pull request even if there are no changes
-        github_token: ${{ secrets.GITHUB_TOKEN }}

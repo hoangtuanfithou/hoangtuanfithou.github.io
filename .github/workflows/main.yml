@@ -12,13 +12,6 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-    inputs:
-        logLevel:
-          description: 'Pull Request Action from master to projects'     
-          required: true
-          default: "Let's go"
-        tags:
-          description: 'Test using reviewers as team'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:

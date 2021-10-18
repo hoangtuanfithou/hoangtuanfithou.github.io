@@ -27,20 +27,28 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        branches: ["project/ecomm", "project/go"]
-        reviewers: ["hoangtuanfithou", "hoangtuanfithou,huynguyen230892"]
+        pull_requests: [
+            {
+              destination_branch: "project/ecomm",
+              reviewer: "hoangtuanfithou"
+            },
+            {
+              destination_branch: "project/go",
+              reviewer: "hoangtuanfithou,huynguyen230892"
+            }
+        ]
     steps:
     - uses: actions/checkout@v2
     - name: pull-request
       uses: repo-sync/pull-request@v2
       with:
-        source_branch: "master"                                 # If blank, default: triggered branch
-        destination_branch: "${{ matrix.branches }}"            # If blank, default: master
-        pr_title: "Pulling into ${{ matrix.branches }}"         # Title of pull request
-        pr_body: ":crown: *An automated PR*"                    # Full markdown support, requires pr_title to be set
-        pr_template: ".github/pull_request_template.md"         # Path to pull request template, requires pr_title to be set, excludes pr_body
-        pr_reviewer: "${{ matrix.reviewers }}"                  # Comma-separated list (no spaces)
-        pr_assignee: "${{ matrix.reviewers }}"                  # Comma-separated list (no spaces)
+        source_branch: "master"                                                             # If blank, default: triggered branch
+        destination_branch: "${{ matrix.pull_requests.destination_branch }}"                # If blank, default: master
+        pr_title: "Merge master into ${{ matrix.pull_requests.destination_branch }}"        # Title of pull request
+        pr_body: ":crown: *An automated PR*"                                                # Full markdown support, requires pr_title to be set
+        pr_template: ".github/pull_request_template.md"                                     # Path to pull request template, requires pr_title to be set, excludes pr_body
+        pr_reviewer: "${{ matrix.pull_requests.reviewer }}"                  # Comma-separated list (no spaces)
+        pr_assignee: "${{ matrix.pull_requests.reviewer }}"                  # Comma-separated list (no spaces)
         pr_label: "auto-pr"                                     # Comma-separated list (no spaces)
         # pr_milestone: "Milestone 1"                           # Milestone name
         pr_draft: false                                         # Creates pull request as draft

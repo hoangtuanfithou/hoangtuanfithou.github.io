@@ -28,7 +28,7 @@ jobs:
     strategy:
       matrix:
         branches: ["project/ecomm", "project/go"]
-        reviewers: ["hoangtuanfithou", "hoangtuanfithou,hoangtuanfithou"]
+        reviewers: ["hoangtuanfithou", "hoangtuanfithou,huynguyen230892"]
     steps:
     - uses: actions/checkout@v2
     - name: pull-request

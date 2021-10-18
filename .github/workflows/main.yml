@@ -12,6 +12,13 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+    inputs:
+        logLevel:
+          description: 'Pull Request Action from master to projects'     
+          required: true
+          default: "Let's go"
+        tags:
+          description: 'Test using reviewers as team'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -21,6 +28,7 @@ jobs:
     strategy:
       matrix:
         branches: ["project/ecomm", "project/go"]
+        reviewers: ["hoangtuanfithou", "hoangtuanfithou,hoangtuanfithou"]
     steps:
     - uses: actions/checkout@v2
     - name: pull-request
@@ -31,8 +39,8 @@ jobs:
         pr_title: "Pulling into ${{ matrix.branches }}"         # Title of pull request
         pr_body: ":crown: *An automated PR*"                    # Full markdown support, requires pr_title to be set
         pr_template: ".github/pull_request_template.md"         # Path to pull request template, requires pr_title to be set, excludes pr_body
-        pr_reviewer: "hoangtuanfithou"                          # Comma-separated list (no spaces)
-        pr_assignee: "hoangtuanfithou"                          # Comma-separated list (no spaces)
+        pr_reviewer: "${{ matrix.reviewers }}"                  # Comma-separated list (no spaces)
+        pr_assignee: "${{ matrix.reviewers }}"                  # Comma-separated list (no spaces)
         pr_label: "auto-pr"                                     # Comma-separated list (no spaces)
         # pr_milestone: "Milestone 1"                           # Milestone name
         pr_draft: false                                         # Creates pull request as draft

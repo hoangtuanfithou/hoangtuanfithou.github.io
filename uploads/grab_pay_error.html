@@ -1,7 +1,8 @@
 <html><head>
     <meta charset="utf-8">
     <title>ShopBack Payment Method Enrollment</title>
-    <script>      if (typeof sbapp !== 'undefined') {
+    <script>      
+      if (typeof sbapp !== 'undefined') {
         sbapp.onEnrollmentError(500, "INTERNAL_SERVER_ERROR", "INTERNAL_SERVER_ERROR", "Something went wrong. Please try again, or contact our support team for assistance.");
       } else if (window.webkit.messageHandlers.onEnrollmentError) {
         window.webkit.messageHandlers.onEnrollmentError.postMessage({

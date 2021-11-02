@@ -7,7 +7,7 @@
     <script>
         if (typeof sbapp !== 'undefined') {
             sbapp.onTopUpSuccess();
-        } else if (window.webkit.messageHandlers.onEnrollmentSuccess) {
+        } else if (window.webkit.messageHandlers.onTopUpSuccess) {
             window.webkit.messageHandlers.onTopUpSuccess.postMessage({});
         }
     </script>

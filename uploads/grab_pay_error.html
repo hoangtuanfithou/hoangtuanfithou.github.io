@@ -6,7 +6,7 @@
     <script>
       if (typeof sbapp !== 'undefined') {
         sbapp.onEnrollmentError(400, "CARD_DECLINED", "CARD_DECLINED", "We weren't able to verify this card with the bank. Please contact your issuing bank or use a different card.");
-        sbapp.onEnrollmentError('{"statusCode":400,"code":"CARD_DECLINED","name":"CARD_DECLINED","title":"Unable to link card","message":"We weren't able to verify this card with the bank. Please contact your issuing bank or use a different card."}');
+        sbapp.onEnrollmentError('{"statusCode":400,"code":"CARD_DECLINED","name":"CARD_DECLINED","title":"Unable to link card","message":"We weren not able to verify this card with the bank. Please contact your issuing bank or use a different card."}');
       } else if (window.webkit.messageHandlers.onEnrollmentError) {
         window.webkit.messageHandlers.onEnrollmentError.postMessage({"statusCode":400,"code":"CARD_DECLINED","name":"CARD_DECLINED","title":"Unable to link card","message":"We weren't able to verify this card with the bank. Please contact your issuing bank or use a different card."});
       }</script>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>TopUp Success</title>
+    <script>
+        if (typeof sbapp !== 'undefined') {
+            sbapp.onTopUpSuccess();
+        } else if (window.webkit.messageHandlers.onTopUpSuccess) {
+            window.webkit.messageHandlers.onTopUpSuccess.postMessage({});
+        }
+    </script>
+</head>
+
+<body>
+    <div style="text-align: center">
+        <h1>Processing TopUp ... Success!!</h1>
+    </div>
+</body>
+
+</html>

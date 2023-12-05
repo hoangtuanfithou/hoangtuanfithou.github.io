@@ -15,5 +15,8 @@ It is not good, not focus.
 So I must think, choose then focus to 1 thing only.
 
 Btw, in that time do not forget to improve current needed skill.
+
+- this is just a new update ☕️ for testing github actions auto PR 6
+
 🐳
 [node_js_tu]:https://www.tutorialspoint.com/nodejs/index.htm

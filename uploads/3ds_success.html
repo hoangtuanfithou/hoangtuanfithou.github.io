@@ -6,9 +6,9 @@
 	<title>ShopBack Payment Method Enrollment</title>
 	<script>
 		if (typeof sbapp !== 'undefined') {
-		sbapp.onEnrollmentSuccess(`{"orderNumber": "123456", "status": "completed"}`);
-      } else if (window.webkit.messageHandlers.onEnrollmentError) {
-		window.webkit.messageHandlers.onEnrollmentSuccess.postMessage({
+		sbapp.onPaymentSuccess(`{"orderNumber": "123456", "status": "completed"}`);
+      } else if (window.webkit.messageHandlers.onPaymentSuccess) {
+		window.webkit.messageHandlers.onPaymentSuccess.postMessage({
 			"orderNumber":"123456",
 			"status": "completed"
 		});

@@ -6,7 +6,7 @@
 	<title>ShopBack Payment Method Enrollment</title>
 	<script>
 		if (typeof sbapp !== 'undefined') {
-		sbapp.onEnrollmentSuccess(`{"_id": "1a-61-45b5-8c60-9fb180",  "paymentMethodDisplayId": "412345******1234",  "paymentMethodType": "CreditCard",  "cardType": "Visa",  "last4": "1234", "fundingSource": "debit", "logoUrl": "https://cloud.shopback.com/image/upload/app-assets/Ecommerce/Payment%20Methods/visa.png"}`);
+		sbapp.onEnrollmentSuccess(`{"orderNumber": "123456", "status": "completed"}`);
       } else if (window.webkit.messageHandlers.onEnrollmentError) {
 		window.webkit.messageHandlers.onEnrollmentSuccess.postMessage({
 			"orderNumber":"123456",

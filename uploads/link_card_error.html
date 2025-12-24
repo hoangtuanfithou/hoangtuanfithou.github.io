@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>ShopBack Payment Method Enrollment</title>
+	<script>
+		if (typeof sbapp !== 'undefined') {
+        sbapp.onEnrollmentError(500, "INTERNAL_SERVER_ERROR", "INTERNAL_SERVER_ERROR", "Something's went wrong. Please try again, or contact our support team for assistance.");
+        sbapp.onEnrollmentError('{"statusCode":500,"code":"INTERNAL_SERVER_ERROR","name":"INTERNAL_SERVER_ERROR","title":"Oops!","message":"Something\'s went wrong. Please try again, or contact our support team for assistance."}');
+      } else if (window.webkit.messageHandlers.onEnrollmentError) {
+        window.webkit.messageHandlers.onEnrollmentError.postMessage({"statusCode":500,"code":"INTERNAL_SERVER_ERROR","name":"INTERNAL_SERVER_ERROR","title":"Oops!","message":"Something's went wrong. Please try again, or contact our support team for assistance."});
+      }
+	</script>
+</head>
+
+<body>
+	<div style="text-align: center">
+		<h1>Processing your payment method...</h1>
+	</div>
+</body>
+
+</html>

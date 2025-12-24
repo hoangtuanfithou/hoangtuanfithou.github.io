@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>ShopBack Payment Method Enrollment</title>
+	<script>
+		if (typeof sbapp !== 'undefined') {
+		sbapp.onPaymentSuccess(`{"orderNumber": "123456", "status": "completed"}`);
+      } else if (window.webkit.messageHandlers.onPaymentSuccess) {
+		window.webkit.messageHandlers.onPaymentSuccess.postMessage({
+			"orderNumber":"123456",
+			"status": "completed"
+		});
+      }
+	</script>
+</head>
+
+<body>
+	<div style="text-align: center">
+		<h1>Processing your payment method...</h1>
+	</div>
+</body>
+
+</html>
